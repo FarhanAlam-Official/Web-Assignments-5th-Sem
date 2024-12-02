@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box !important;
+}
+.container{
+    width: 50%;
+    background-image: url(Oxford-Watermark.png);
+    background-size:contain !important;
+    margin: 50px 380px;
+    border: 2.5px solid black;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.container header{
+    display: flex;
+}
+.logo{
+    width: 20%;
+}
+.college-info{
+    width: 80%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.college-info h3{
+    text-decoration: underline;
+}
+.student-info{
+    margin-top: 35px;
+    font-size: 0.9rem;
+}
+.student-info span{
+    font-weight: bolder;
+}
+.student-info p{
+    margin: 7px 0px;
+}
+#marks{
+    width: 100%;
+    height: 450px;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+#marks th{
+    font-size: 0.9rem;
+    padding: 5px;
+}
+#marks td,tr{
+    font-size: 0.8rem;
+    padding: 5px;
+}
+#marks tfoot {
+    text-align: right;
+}
+.signs{
+    font-size: 0.85rem;
+    padding-top: 20px;
+    font-weight: 550;
+}
+.signs p{
+    margin-top: 30px;
+}
+footer{
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 5px 10px;
+    padding-bottom: 0px;
+    border-top: 2px solid #dbdbdb;
+    font-size: 0.85rem;
+}
+footer p{
+    margin: 10px 5px;
+}
