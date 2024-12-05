@@ -3,47 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment-II</title>
-    <!-- <style>
-        * {
-            box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
-        }
-        body{
-            background:linear-gradient(to right, rgb(120, 34, 120) 0%, black 80%);
-        }
-        .navbar-container {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: transparent transparent;
-            color: black;                                           
-        }
-        .logo  {
-            margin-right: 20%;
-        }
-        .navbar-ul{
-            width: 100%;
-            display: flex;
-            margin-left: 20%;
-        }
-        .navbar-ul a{
-            text-decoration-line: none;
-            padding: 10px;
-            margin-left: 20px;
-            list-style: none;
-            color: white;
-            font-size: large;
-        }
-    </style> -->
+    <title>Luxury Watches</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="navbar-container">
             <div class="logo">
-                <img src="./images/hand-watch.png" height="40px" alt="logo">
+                <img src="./images/hand-watch.png" height="40px" alt="logo"> Luxury Watches
             </div>
             <div class="navbar">
                 <nav class="navbar" >
@@ -52,7 +19,7 @@
                             <i class="fas fa-home"></i> Home
                         </a> </li>
                         <li><a href="watches.html">
-                            <i class="fas fa-shopping-cart"></i>  Products
+                            <i class="fas fa-shopping-cart"></i>  Watches
                         </a></li>
                         <li><a href="contact.html">
                             <i class="fas fa-phone"></i> Contact Us
@@ -60,6 +27,20 @@
                         <li> <a href="about.html">
                             <i class="fas fa-info-circle"></i> About Us
                         </a></li>
+                        <li> <a href="warranty.html">
+                            <i class="fa-solid fa-award"></i> Warranty and Services
+                        </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Warranty</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                                <li><a href="#">Service Centers</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </li>
+                        <li id="cart">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -67,8 +48,35 @@
     </header>
     <section class="hero-container">
         <div class="hero-section">
-            <img src="/Assignment-II/images/hero-section.webp" alt="">
+            <div class="hero-content">
+                <button disabled> Limited to 15 pieces </button>
+                <h1>Hand-made watches</h1>
+                <p>Discover the beauty of hand-crafted watches at our store</p>
+                <button>  
+                    <a href="watches.html">Shop Now</a>
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="/Assignment-II/images/hero-section.webp" alt=" Hero section">
+            </div>
+            <div class="hero-video">
+                <span id="watch-status"> Available </span>
+                <video src="/Assignment-II/videos/hero-section.mp4" autoplay loop muted>
+                    <source src="" type="mp4">
+                    
+                </video>
+            </div>
+            <div class="bottom-info">
+                <span id="watch-name">Amarta</span>
+                <span id="dialer-image"> Dialer </span>
+                <button id="changewatch"> Titanium </button>
+            </div>
         </div>
     </section>
+    <footer>
+        <div class="footer-container">
+            
+        </div>
+    </footer>
 </body>
 </html>
