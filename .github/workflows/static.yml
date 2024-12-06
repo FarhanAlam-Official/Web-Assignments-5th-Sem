@@ -31,12 +31,12 @@ jobs:
         run: npm install
       - name: Build the site (if necessary)
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact for assignment ii
+      - name: Disable Jekyll
+        run: touch .nojekyll
+      - name: Upload artifact for assignment i
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Assignment-II'  # Adjust to the specific folder
+          path: './Assignments-I'  # Adjust to the correct folder
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
