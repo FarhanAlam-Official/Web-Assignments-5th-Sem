@@ -4,72 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Watches</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="navbar-container">
-            <div class="logo">
-                <img src="./images/hand-watch.png" height="40px" alt="logo"> Luxury Watches
-            </div>
-            <div class="navbar">
+            <div class="logo-container">
+                <div class="logo"></div>
+                <span>CELESTIQUE</span></div>
+            <div class="navbar-elements">
                 <nav class="navbar" >
-                    <ul class="navbar-ul" type="none">
-                        <li><a href="index.html"> 
-                            <i class="fas fa-home"></i> Home
-                        </a> </li>
-                        <li><a href="watches.html">
-                            <i class="fas fa-shopping-cart"></i>  Watches
+                    <ul class="navbar-ul">
+                        <li><a href="index.html" data-name="Home">
+                            <i class="fas fa-home"></i>
                         </a></li>
-                        <li><a href="contact.html">
-                            <i class="fas fa-phone"></i> Contact Us
+                        <li><a href="watches.html" data-name="Watches">
+                            <i class="fas fa-shopping-cart"></i>
                         </a></li>
-                        <li> <a href="about.html">
-                            <i class="fas fa-info-circle"></i> About Us
+                        <li><a href="contact.html" data-name="Contact Us">
+                            <i class="fas fa-phone"></i>
                         </a></li>
-                        <li> <a href="warranty.html">
-                            <i class="fa-solid fa-award"></i> Warranty and Services
-                        </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Warranty</a></li>
-                                <li><a href="#">Return Policy</a></li>
-                                <li><a href="#">Service Centers</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li id="cart">
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
-                        </li>
-                    </ul>
+                        <li><a href="about.html" data-name="About Us">
+                            <i class="fas fa-info-circle"></i>
+                        </a></li>
+                        <li><a href="warranty.html" data-name="Warranty & Services">
+                            <i class="fa-solid fa-award"></i>
+                        </a></li>
+                        <li><a href="cart.html" data-name="Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a></li>
+                    </ul>                                      
                 </nav>
             </div>
         </div>
     </header>
+    <section class="pre-hero">
+        <button class="limited-edition-btn" disabled> <span>Limited to</span> 15 pieces</button>
+        <span id="watch-status">Available</span>
+    </section>
     <section class="hero-container">
         <div class="hero-section">
+            <!-- Hero Content -->
             <div class="hero-content">
-                <button disabled> Limited to 15 pieces </button>
-                <h1>Hand-made watches</h1>
-                <p>Discover the beauty of hand-crafted watches at our store</p>
-                <button>  
-                    <a href="watches.html">Shop Now</a>
-                </button>
+                <h1 class="hero-title">OPEN GEAR FLYING TOURBILLON PARAIBA</h1>
+                <a href="watches.html" class="shop-now-btn">FIND OUT MORE</a>
             </div>
-            <div class="hero-image">
-                <img src="/Assignment-II/images/hero-section.webp" height="50px" alt=" Hero section">
+    
+            <!-- Hero Image -->
+            <div class="hero-image">            
+                <!-- It contains the hero image -->
             </div>
+    
+            <!-- Hero Video -->
             <div class="hero-video">
-                <span id="watch-status"> Available </span>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RG3K7NQtiME?si=n4lTTDi45tiuTHmm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="bottom-info">
-                <span id="watch-name">Amarta</span>
-                <span id="dialer-image"> Dialer </span>
-                <button id="changewatch"> Titanium </button>
+                    <video controls autoplay muted loop poster="thumbnail.jpg">
+                        <source src="./images/sample-video.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/RG3K7NQtiME?si=n4lTTDi45tiuTHmm" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe> -->
             </div>
         </div>
+    
+        <!-- Bottom Info -->
+        <div class="bottom-info">
+            <span id="watch-name" class="watch-name">Amarta</span>
+            <span id="dialer-image" class="dialer">Dialer</span>
+            <button id="changewatch" class="change-watch-btn">Titanium</button>
+        </div>
     </section>
+    
     <footer>
         <div class="footer-container">
             <footer class="footer">
