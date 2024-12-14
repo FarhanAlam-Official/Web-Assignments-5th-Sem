@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EEEEEE;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    gap: 20px 10px;
+    margin-bottom: 25%;
+}
+
+#title{
+    display: inline-block;
+    width: 100%;
+    margin-top: 2.5%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 2.5%;
+}
+
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 10px;
+    padding: 10px;
+    padding-top: 3%;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.movie-name{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 55%;
+    width: 40%;
+    height: 25px;
+    padding: 5px;
+    background-color: #F15412;
+    color: black;
+    border-top-right-radius: 8px;
+    white-space: nowrap;          
+    overflow: hidden;                 
+    text-overflow: ellipsis;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+@media (min-width: 992px) {
+    .container div{
+        width: 30%;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .container{
+        flex-wrap: wrap;
+
+    }
+
+    .card-1,.card-2{
+        width: 43.5%;
+    }
+
+    .card-3{
+        width: 94%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    
+    .container div{
+        width: 100%;
+    }
+}
