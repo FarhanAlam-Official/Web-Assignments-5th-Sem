@@ -96,7 +96,7 @@
 /* Hero Image Styling */
 .hero-image {
     background-image: url(./images/hero-image-01.png);
-    background-size: cover;
+    background-size: 180%;
     background-position: center;
     width: 350px;
     height: 580px;
