@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Luxury Watches</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
@@ -12,39 +14,31 @@
     <!-- Navbar -->
     <header>
         <div class="navbar-container">
-            <div class="logo">
-                <img src="./images/hand-watch.png" height="40px" alt="logo"> Luxury Watches
-            </div>
-            <div class="navbar">
+            <div class="logo-container">
+                <div class="logo"></div>
+                <span>CELESTIQUE</span></div>
+            <div class="navbar-elements">
                 <nav class="navbar" >
-                    <ul class="navbar-ul" type="none">
-                        <li><a href="index.html"> 
-                            <i class="fas fa-home"></i> Home
-                        </a> </li>
-                        <li><a href="watches.html">
-                            <i class="fas fa-shopping-cart"></i>  Watches
+                    <ul class="navbar-ul">
+                        <li><a href="index.html" data-name="Home">
+                            <i class="fas fa-home"></i>
                         </a></li>
-                        <li><a href="contact.html">
-                            <i class="fas fa-phone"></i> Contact Us
+                        <li><a href="watches.html" data-name="Watches">
+                            <i class="fas fa-shopping-cart"></i>
                         </a></li>
-                        <li> <a href="about.html">
-                            <i class="fas fa-info-circle"></i> About Us
+                        <li><a href="contact.html" data-name="Contact Us">
+                            <i class="fas fa-phone"></i>
                         </a></li>
-                        <li> <a href="warranty.html">
-                            <i class="fa-solid fa-award"></i> Warranty and Services
-                        </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Warranty</a></li>
-                                <li><a href="#">Return Policy</a></li>
-                                <li><a href="#">Service Centers</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms &amp; Conditions</a></li>
-                            </ul>
-                        </li>
-                        <li id="cart">
-                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
-                        </li>
-                    </ul>
+                        <li><a href="about.html" data-name="About Us">
+                            <i class="fas fa-info-circle"></i>
+                        </a></li>
+                        <li><a href="warranty.html" data-name="Warranty & Services">
+                            <i class="fa-solid fa-award"></i>
+                        </a></li>
+                        <li><a href="cart.html" data-name="Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a></li>
+                    </ul>                                      
                 </nav>
             </div>
         </div>
@@ -118,7 +112,7 @@
                         <h3>Contact Us</h3>
                         <a href="tel:+1234567890">+1 (234) 567-890</a>
                         <a href="mailto:info@luxurybrand.com">info@luxurybrand.com</a>
-                        <p>123 Luxury Avenue, Beverly Hills, CA</p>
+                        <p>Kamalnagar,Bharatpur-03,Chitwan</p>
                     </div>
                     <!-- Social Icons Column -->
                     <div class="footer-column">
