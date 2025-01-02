@@ -1,0 +1,131 @@
+/* Main Section Styles */
+.cart-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Product Cards */
+.product-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.product-card {
+    background: #2a2f38;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h2, .product-card .subtitle {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+.product-card .details {
+    margin-top: 10px;
+}
+
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4cb5f5;
+    margin-top: 10px;
+}
+
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f75454;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Summary Sidebar */
+.summary-sidebar {
+    background: #2a2f38;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary {
+    margin-bottom: 20px;
+}
+
+.summary p {
+    margin: 5px 0;
+}
+
+.summary h3 {
+    margin: 15px 0 5px;
+    font-size: 18px;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4cb5f5;
+}
+
+.checkout-btn, .extend-warranty-btn {
+    background: #4cb5f5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.checkout-btn:hover, .extend-warranty-btn:hover {
+    background: #3a94d8;
+}
+
+.extend-warranty-btn {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.extend-warranty-btn i {
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cart-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .summary-sidebar {
+        width: 100%;
+    }
+}

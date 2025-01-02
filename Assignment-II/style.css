@@ -1,0 +1,266 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background: rgb(39,69,106);
+    background: linear-gradient(150deg, rgba(39,69,106,1) 20%, rgba(8,9,11,1) 51%);
+    /* background: rgb(130,108,77);
+background: linear-gradient(146deg, rgba(130,108,77,1) 20%, rgba(0,0,0,1) 51%); */
+}
+header {
+    background-color: none;
+    color: black;
+    /* padding: 10px 20px; */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo {
+    background-image: url(./images/Logo.png);
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    background-repeat: no-repeat;
+}
+
+.logo-container span{
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar-elements {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 20%;
+}
+
+.navbar-ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 80px; /* Generous spacing between items for balance */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for list items */
+.navbar-ul li {
+    position: relative;
+}
+
+/* Links styling */
+.navbar-ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Icon styling */
+.navbar-ul i {
+    font-size: 1.2rem; /* Refined icon size for luxury feel */
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: white !important;
+}
+
+/* Tooltip styling using ::after */
+.navbar-ul a::after {
+    content: attr(data-name); /* Dynamically set tooltip text */
+    position: absolute;
+    bottom: -40px; /* Position tooltip below the icon */
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9); /* Elegant dark background */
+    color: #fff; /* White text for contrast */
+    padding: 8px 12px; /* Spacing for a clean look */
+    border-radius: 8px; /* Rounded edges for a modern feel */
+    font-size: 14px; /* Refined font size */
+    font-weight: 500; /* Slightly bold for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    white-space: nowrap; /* Prevent text wrapping */
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Invisible by default */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-ul i:hover {
+    color: #d4af37 !important; /* Luxurious gold color on hover */
+}
+
+.navbar-ul a:hover i {
+    transform: scale(1.15); /* Slight zoom for interactivity */
+    color: #d4af37; /* Match hover color */
+}
+
+.navbar-ul a:hover::after {
+    opacity: 1; /* Show tooltip */
+    visibility: visible; /* Make tooltip visible */
+    transform: translateX(-50%) translateY(-8px); /* Subtle upward movement */
+}
+
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #d4af37;
+    color: white;
+}
+
+.navbar-ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        background-color: #111;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar-ul li {
+        margin: 10px 20px;
+    }
+
+    .navbar-ul.show {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 5%;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer h3 {
+    /* color: #d4af37; */
+    /* Luxury gold color */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #d4af37;
+}
+
+.footer-column {
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #d4af37;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+}

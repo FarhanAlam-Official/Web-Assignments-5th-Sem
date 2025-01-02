@@ -1,0 +1,100 @@
+
+
+.main-content {
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0a0f27, #1c3b64);
+    color: white;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about-hero img {
+    max-width: 100%;
+    height: auto;
+    margin: 30px 0;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Our Team Section */
+.team-section {
+    margin-top: 50px;
+    padding: 50px 20px;
+    background-color: #eaeaea;
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover{
+    transform: scale(1.05);
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #555;
+}
