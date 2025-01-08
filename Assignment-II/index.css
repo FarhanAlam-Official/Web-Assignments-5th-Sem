@@ -274,7 +274,6 @@
 
 @media (max-width: 768px) {
     .navbar {
-        background-color: rgba(0, 0, 0, 0.9); /* Add background color for better visibility */
         position: fixed; /* Keep navbar fixed at top */
         top: 0;
         left: 0;
@@ -318,43 +317,6 @@
     }
 }
 
-/* Add these improvements */
-
-/* Better mobile navigation handling */
-.burger-menu {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-        cursor: pointer;
-        z-index: 1000;
-    }
-
-    .navbar-ul {
-        position: fixed;
-        top: 60px; /* Adjust based on your header height */
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 20px 0;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    /* Show menu when checkbox is checked */
-    .nav-toggle:checked ~ nav .navbar-ul {
-        transform: translateY(0);
-    }
-
-    .navbar-ul li {
-        display: block;
-        margin: 15px 0;
-        text-align: center;
-    }
-}
-
 /* Improve video responsiveness */
 .hero-video {
     width: 100%;
@@ -385,74 +347,4 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-}
-
-/* Hide checkbox but keep it functional */
-.nav-toggle {
-    display: none;
-}
-
-/* Navbar and burger menu styling */
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    position: relative;
-}
-
-.navbar-elements {
-    display: flex;
-    align-items: center;
-}
-
-.burger-menu {
-    display: none;
-   font-size: 24px;
-    color: white;
-    cursor: pointer;
-    padding: 5px;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-        position: relative;
-        z-index: 1001;
-    }
-
-    .navbar-ul {
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 80px 20px 20px;
-        transition: right 0.3s ease-in-out;
-    }
-
-    /* Show menu when checkbox is checked */
-    .nav-toggle:checked ~ nav .navbar-ul {
-        right: 0;
-    }
-
-    .navbar-ul li {
-        display: block;
-        margin: 20px 0;
-        text-align: left;
-    }
-
-    /* Add some spacing and styling forsidebar items */
-    .navbar-ul li a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .navbar-ul li a i {
-        width: 20px;
-    }
 }

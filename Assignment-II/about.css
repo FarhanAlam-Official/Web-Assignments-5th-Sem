@@ -1,171 +1,271 @@
-
-
 .main-content {
     padding: 50px;
-    background-color: #f8f8f8;
-}
-
-/* Hero Section */
-.about-hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #0a0f27, #1c3b64);
+    background: transparent;
     color: white;
 }
 
+/* Hero Section - Enhanced with gradient */
+.about-hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(39,69,106,0.8) 0%, rgba(8,9,11,0.9) 100%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-bottom: 50px;
+}
+
 .about-hero h1 {
-    font-size: 48px;
+    font-size: 3.5rem;
     margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #64a0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.8s ease forwards;
+    text-shadow: 0 0 20px rgba(100,160,255,0.2);
 }
 
 .about-hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #b8d8ff;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
 }
 
-.about-hero img {
-    max-width: 100%;
-    height: auto;
-    margin: 30px 0;
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* About Section */
+/* About Section - Enhanced with colors */
 .about-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(41,72,110,0.6) 0%, rgba(12,13,15,0.8) 100%);
+    border: 1px solid rgba(100,160,255,0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin: 30px 0;
 }
 
 .about-section h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #64a0ff, #3d6ba3);
+    transition: width 0.3s ease;
+}
+
+.about-section:hover h2::after {
+    width: 100%;
 }
 
 .about-section p {
-    font-size: 16px;
-    color: #555;
+    font-size: 1.1rem;
+    color: #d1e3ff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Our Team Section */
+/* Team Section - Enhanced with gradients */
 .team-section {
-    margin-top: 50px;
-    padding: 50px 20px;
-    background-color: #eaeaea;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(45,76,114,0.6) 0%, rgba(16,17,19,0.8) 100%);
+    border: 1px solid rgba(100,160,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
 }
 
 .team-section h2 {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 36px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(100,160,255,0.2);
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }
 
 .team-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(39,69,106,0.3) 100%);
+    border: 1px solid rgba(100,160,255,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
 }
 
-.team-card:hover{
-    transform: scale(1.05);
+.team-card:nth-child(1) { animation-delay: 0.2s; }
+.team-card:nth-child(2) { animation-delay: 0.4s; }
+.team-card:nth-child(3) { animation-delay: 0.6s; }
+.team-card:nth-child(4) { animation-delay: 0.8s; }
+
+.team-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(39,69,106,0.4) 100%);
+    border: 1px solid rgba(100,160,255,0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 .team-card img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border: 4px solid rgba(100,160,255,0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.1) rotate(5deg);
+    border-color: #64a0ff;
 }
 
 .team-card h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .team-card p {
-    font-size: 14px;
-    color: #555;
+    color: #b8d8ff;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-/* Hide checkbox but keep it functional */
-.nav-toggle {
-    display: none;
+/* Enhanced Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Navbar and burger menu styling */
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    position: relative;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.navbar-elements {
-    display: flex;
-    align-items: center;
-}
-
-.burger-menu {
-    display: none;
-   font-size: 24px;
-    color: white;
-    cursor: pointer;
-    padding: 5px;
-}
-
-/* Mobile styles */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-        position: relative;
-        z-index: 1001;
+    .about-hero h1 {
+        font-size: 2.5rem;
     }
-
-    .navbar-ul {
-        position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 80px 20px 20px;
-        transition: right 0.3s ease-in-out;
+    
+    .about-section h2,
+    .team-section h2 {
+        font-size: 2rem;
     }
-
-    /* Show menu when checkbox is checked */
-    .nav-toggle:checked ~ nav .navbar-ul {
-        right: 0;
+    
+    .team-grid {
+        grid-template-columns: 1fr;
     }
+}
 
-    .navbar-ul li {
-        display: block;
-        margin: 20px 0;
-        text-align: left;
+/* Add subtle glow effects */
+.about-hero h1,
+.about-section h2,
+.team-section h2 {
+    text-shadow: 0 0 20px rgba(100,160,255,0.2);
+}
+
+/* Enhanced hover effects */
+.team-card:hover h3 {
+    background: linear-gradient(to right, #ffffff, #64a0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Add section transitions */
+.about-section,
+.team-section,
+.team-card {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Add subtle animation for sections on scroll */
+.about-section,
+.team-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    /* Add some spacing and styling forsidebar items */
-    .navbar-ul li a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .navbar-ul li a i {
-        width: 20px;
+/* Add hover effect for sections */
+.about-section:hover,
+.team-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Add subtle particle effect */
+.about-hero::before,
+.about-section::before,
+.team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(100,160,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Improve readability for mobile */
+@media (max-width: 768px) {
+    .about-hero,
+    .about-section,
+    .team-section {
+        background: linear-gradient(135deg, rgba(39,69,106,0.9) 0%, rgba(8,9,11,0.95) 100%);
+    }
+    
+    .team-card {
+        background: rgba(255,255,255,0.08);
     }
 }
 

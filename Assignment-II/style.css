@@ -191,7 +191,7 @@ header {
 
     .logo-container {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
         padding: 0 20px;
     }
 
@@ -261,40 +261,77 @@ header {
     }
 }
 
-/* Add styles for burger menu */
-.burger-menu {
+/* Hide checkbox but keep it functional */
+.nav-toggle {
     display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
 }
 
+/* Navbar and burger menu styling */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-elements {
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu {
+    display: none;
+   font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
     .burger-menu {
         display: block;
+        position: relative;
+        z-index: 1001;
     }
 
-    .navbar-elements {
-        display: none; /* Hide by default on mobile */
+    .navbar-ul {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
     }
 
-    .navbar-elements.active {
-        display: block; /* Show when active class is added */
+    /* Show menu when checkbox is checked */
+    .nav-toggle:checked ~ nav .navbar-ul {
+        right: 0;
     }
 
-    /* Dropdown adjustments for mobile */
-    .dropdown-menu {
-        position: static;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        box-shadow: none;
+    .navbar-ul li {
+        display: block;
+        margin: 20px 0;
+        text-align: left;
     }
 
-    .dropdown-menu a {
-        padding: 8px 15px;
-        text-align: center;
+    /* Add some spacing and styling forsidebar items */
+    .navbar-ul li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navbar-ul li a i {
+        width: 20px;
     }
 }
+
 
 /* Footer Styles */
 .footer {
