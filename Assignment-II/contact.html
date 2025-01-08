@@ -16,6 +16,11 @@
                 <div class="logo"></div>
                 <span>CELESTIQUE</span></div>
             <div class="navbar-elements">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
                 <nav class="navbar" >
                     <ul class="navbar-ul">
                         <li><a href="index.html" data-name="Home">
@@ -43,37 +48,84 @@
     </header>
 
     <div class="hero-section">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you! Reach out for any inquiries or feedback.</p>
+        <div class="hero-content">
+            <h1>Get in Touch</h1>
+            <p class="hero-description">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
     </div>
 
     <div class="contact-container">
-        <div class="contact-info">
-            <h2>Get in Touch</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Kamalnagar, Bharatpur-03, Chitwan, Nepal</p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+9779800000011">+977 9800000011</a></p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:contact@info.com">contact@info.com</a></p>
-            <p><i class="fas fa-clock"></i> Working Hours:</p>
-            <ul>
-                <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
-                <li>Saturday: 10:00 AM - 4:00 PM</li>
-            </ul>
-        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-content">
+                            <h3>Visit Us</h3>
+                            <p>Kamalnagar, Bharatpur-03<br>Chitwan, Nepal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="info-content">
+                            <h3>Call Us</h3>
+                            <a href="tel:+9779800000011">+977 9800000011</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <a href="mailto:contact@info.com">contact@info.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                               Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Product Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 
